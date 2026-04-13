@@ -8,17 +8,19 @@ void setup() {
 }
 
 void loop() {
-  // Doc kenh A0
-  adcValues[0] = analogRead(A0);
-  nhietDo[0] = (adcValues[0] * 500.0) / 1023.0;
+  // Doc va tinh toan cho 3 kenh
+  for (int i = 0; i < 3; i++) {
+    adcValues[i] = analogRead(i);
+    nhietDo[i] = (adcValues[i] * 500.0) / 1023.0;
+  }
   
-  // Doc kenh A1
-  adcValues[1] = analogRead(A1);
-  nhietDo[1] = (adcValues[1] * 500.0) / 1023.0;
+  // Dong goi thanh dinh dang JSON chuyên nghiệp
+  // Định dạng: {"A0": 25, "A1": 26, "A2": 25}
+  sprintf(chuoi, "{\"A0\": %d, \"A1\": %d, \"A2\": %d}\n", 
+          (int)nhietDo[0], (int)nhietDo[1], (int)nhietDo[2]);
   
-  // Dong goi thanh chuoi CSV va gui qua Serial
-  sprintf(chuoi, "%d,%d\n", (int)nhietDo[0], (int)nhietDo[1]);
+  // Gui chuoi len Serial
   Serial.print(chuoi);
   
-  delay(100);
+  delay(1000); // Tăng delay lên 1s để dễ quan sát chuỗi JSON
 }
