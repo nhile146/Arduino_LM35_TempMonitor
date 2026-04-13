@@ -8,8 +8,7 @@ void setup() {
 }
 
 void loop() {
-<<<<<<< HEAD
-  // Doc va tinh toan cho 3 kenh
+// Doc va tinh toan cho 3 kenh
   for (int i = 0; i < 3; i++) {
     adcValues[i] = analogRead(i);
     nhietDo[i] = (adcValues[i] * 500.0) / 1023.0;
