@@ -23,3 +23,8 @@
 * **Yen Nhi (Leader):** Quản lý Git, xử lý JSON & Conflict.
 * **SV A:** Phát triển đọc đa kênh.
 * **SV B:** Tối ưu Serial Output.
+
+## Tác giả
+Dự án được thực hiện và phát triển bởi:
+* **Yen Nhi** - *Sinh viên Học viện Công nghệ Bưu chính Viễn thông (PTIT)*
+* **Hồ sơ năng lực cá nhân:** [nhile146.github.io](https://nhile146.github.io/)
